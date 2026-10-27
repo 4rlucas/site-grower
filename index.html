@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grower — Consultoria em fertilidade do solo e nutrição de plantas</title>
+<meta name="description" content="Consultoria agronômica em fertilidade do solo e nutrição de plantas. Ciência, dados e prática para tornar sua lavoura mais produtiva e rentável.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Grower — Consultoria agronômica">
+<meta property="og:description" content="Fertilidade do solo e nutrição de plantas. Ciência, dados e prática no campo.">
+<meta property="og:image" content="assets/campo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#152921; --bg2:#10201a; --card:#1f3a28; --card2:#293e1d;
+    --lime:#dcff00; --green:#77c748; --txt:#eef2ec; --muted:#a8b8ad; --line:#2c4636;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  .lime{color:var(--lime)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:rgba(21,41,33,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav img{height:30px;width:auto}
+  .nav ul{display:flex;gap:28px;list-style:none;font-size:.95rem;font-weight:500}
+  .nav ul a{text-decoration:none;color:var(--muted)}
+  .nav ul a:hover{color:var(--lime)}
+  .btn{display:inline-block;background:var(--lime);color:#14200f;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;transition:transform .15s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+
+  /* hero */
+  .hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:url(assets/campo.jpg) center/cover no-repeat;opacity:.38}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 25%,rgba(21,41,33,.55) 70%,rgba(21,41,33,.2))}
+  .hero .wrap{width:100%;position:relative;z-index:1;padding-top:60px;padding-bottom:60px}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:18px}
+  h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;font-weight:800;letter-spacing:-.03em}
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--txt);max-width:560px;margin:22px 0 34px;opacity:.92}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* numbers */
+  .numbers{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .numbers .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:40px;padding-bottom:40px}
+  .num strong{display:block;font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--lime);letter-spacing:-.02em;line-height:1.1}
+  .num span{color:var(--muted);font-size:.95rem}
+
+  section{padding:96px 0}
+  h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;letter-spacing:-.025em;line-height:1.08;margin-bottom:18px}
+  .sub{color:var(--muted);max-width:680px;font-size:1.05rem;margin-bottom:44px}
+
+  /* cards */
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .card h3{font-size:1.25rem;font-weight:700;color:var(--lime);margin-bottom:10px;letter-spacing:-.01em}
+  .card p{color:var(--txt);opacity:.86;font-size:.98rem}
+  .mvv .card{background:var(--card2);text-align:left}
+  .mvv .card h3{border-bottom:1px solid rgba(220,255,0,.35);padding-bottom:12px;margin-bottom:14px}
+
+  /* steps */
+  .steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(7,1fr);gap:14px;position:relative}
+  .steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 16px 20px;font-weight:600;font-size:.98rem;line-height:1.35}
+  .steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--lime);color:#14200f;font-weight:800;margin-bottom:14px}
+  .big7{display:flex;align-items:baseline;gap:16px;margin-bottom:26px}
+  .big7 b{font-size:clamp(4rem,10vw,7rem);line-height:.9;font-weight:800;color:var(--lime)}
+  .big7 span{font-size:1.2rem;color:var(--muted);max-width:260px}
+
+  /* cultures */
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .chips span{border:1px solid var(--lime);color:var(--lime);border-radius:999px;padding:8px 18px;font-weight:600}
+  .photo{border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+  .photo img{width:100%;height:100%;object-fit:cover}
+
+  /* contact */
+  .contact{background:var(--bg2);border-top:1px solid var(--line)}
+  .contact .box{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:24px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .contact h2{margin-bottom:10px}
+  .contact p{color:var(--muted);max-width:520px}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  footer img{height:24px;width:auto;opacity:.9}
+  .foot-info{display:flex;flex-direction:column;gap:4px;text-align:right}
+  .foot-info a{color:var(--muted)}
+  .foot-info a:hover{color:var(--lime)}
+  @media (max-width:720px){.foot-info{text-align:left}}
+
+  @media (max-width:960px){
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .g3{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr}
+  }
+  @media (max-width:720px){
+    .nav ul{display:none}
+    .numbers .wrap{grid-template-columns:repeat(2,1fr)}
+    .g2{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .contact .box{padding:32px}
+    .hero::after{background:linear-gradient(180deg,rgba(21,41,33,.6),var(--bg) 85%)}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" aria-label="Grower — início"><img src="assets/logo-grower.png" alt="Grower" width="171" height="30" style="height:30px;width:auto"></a>
+    <ul>
+      <li><a href="#quem-somos">Quem somos</a></li>
+      <li><a href="#servico">Serviço</a></li>
+      <li><a href="#culturas">Culturas</a></li>
+      <li><a href="#tecnologia">Tecnologia</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Consultoria agronômica</span>
+      <h1>Consultoria<br><span class="lime">Grower</span></h1>
+      <p class="lead">Fertilidade do solo e nutrição de plantas. Nossa missão é tornar sua lavoura mais produtiva e rentável.</p>
+      <div class="ctas">
+        <a class="btn" href="#contato">Fale com a Grower</a>
+        <a class="btn ghost" href="#servico">Como trabalhamos</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="numbers">
+    <div class="wrap">
+      <div class="num"><strong>+390 mil</strong><span>hectares assistidos</span></div>
+      <div class="num"><strong>2</strong><span>países de atuação</span></div>
+      <div class="num"><strong>8</strong><span>culturas atendidas</span></div>
+      <div class="num"><strong>7</strong><span>etapas para as máximas produtividades</span></div>
+    </div>
+  </div>
+
+  <section id="quem-somos">
+    <div class="wrap">
+      <span class="eyebrow">Quem somos</span>
+      <h2>Ciência, dados e prática<br>a serviço do campo</h2>
+      <p class="sub">Uma consultoria técnica que conecta conhecimento científico à realidade de cada produtor.</p>
+      <div class="grid g2">
+        <div class="card">
+          <h3>História e compromisso</h3>
+          <p>A consultoria Grower nasce com o compromisso de levar conhecimento técnico aplicado ao campo, conectando ciência, prática e a realidade do produtor. Desde o início, nossa atuação é pautada por responsabilidade técnica, proximidade com o cliente e foco em resultados consistentes.</p>
+        </div>
+        <div class="card">
+          <h3>Inovação e crescimento</h3>
+          <p>A Grower acredita que inovar é evoluir junto com o agro. Por isso, investe continuamente em atualização técnica, metodologias modernas e análise de dados, promovendo decisões mais assertivas e sustentáveis para cada sistema produtivo.</p>
+        </div>
+        <div class="card">
+          <h3>Expertise</h3>
+          <p>A equipe Grower é formada por profissionais com sólida base técnica e ampla vivência prática em diferentes regiões e culturas. Essa combinação permite uma leitura precisa dos desafios do campo e o desenvolvimento de estratégias personalizadas, alinhadas às necessidades de cada cliente.</p>
+        </div>
+        <div class="card">
+          <h3>Crescimento constante</h3>
+          <p>O crescimento da Grower é reflexo da confiança construída ao longo do tempo. A consultoria evolui junto com seus parceiros, fortalecendo relações, aprimorando processos e ampliando sua atuação, sempre com foco em eficiência, produtividade e longevidade dos sistemas agrícolas.</p>
+        </div>
+      </div>
+
+      <div class="grid g3 mvv" style="margin-top:18px">
+        <div class="card">
+          <h3>Missão</h3>
+          <p>Gerar valor no campo por meio de consultoria técnica aplicada, conectando ciência, dados e prática agronômica para apoiar decisões mais eficientes, sustentáveis e rentáveis aos produtores e parceiros.</p>
+        </div>
+        <div class="card">
+          <h3>Visão</h3>
+          <p>Ser referência nacional em consultoria agronômica técnica e estratégica, reconhecida pela credibilidade científica, proximidade com o campo e capacidade de transformar conhecimento em resultado produtivo.</p>
+        </div>
+        <div class="card">
+          <h3>Valores</h3>
+          <p>Ética, transparência e verdade técnica, atuando com base em dados, experiência prática e responsabilidade profissional. Parcerias duradouras, proximidade com o campo e inovação contínua, sempre com foco em resultados sustentáveis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servico" style="background:var(--bg2)">
+    <div class="wrap">
+      <span class="eyebrow">Nosso serviço</span>
+      <div class="big7"><b>7</b><span>etapas para as máximas produtividades</span></div>
+      <ol class="steps">
+        <li>Avaliação da fertilidade</li>
+        <li>Planejamento de calagem e gessagem</li>
+        <li>Planejamento da nutrição com NPK</li>
+        <li>Planejamento de correção com micronutrientes</li>
+        <li>Evolução da fertilidade</li>
+        <li>Nutrição foliar e fisiologia</li>
+        <li>Suporte online</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="culturas">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Culturas</span>
+        <h2>Expertise nas principais culturas do Brasil</h2>
+        <p class="sub" style="margin-bottom:0">A Grower atua de forma estratégica no manejo das principais culturas do sistema produtivo brasileiro. Essa experiência é construída a partir da integração entre ciência, dados de campo e vivência prática em diferentes regiões, permitindo recomendações assertivas, adaptadas à realidade de cada cultura, ambiente de produção e objetivo do produtor.</p>
+        <div class="chips">
+          <span>Soja</span><span>Milho</span><span>Feijão</span><span>Algodão</span><span>Sorgo</span><span>Trigo</span><span>Girassol</span><span>Arroz</span>
+        </div>
+      </div>
+      <div class="photo"><img src="assets/graos.jpg" alt="Grãos de diferentes culturas"></div>
+    </div>
+  </section>
+
+  <section id="tecnologia" style="background:var(--bg2)">
+    <div class="wrap">
+      <span class="eyebrow">Tecnologia Grower</span>
+      <h2>Plataformas próprias<br>para decisões baseadas em dados</h2>
+      <p class="sub">A Grower desenvolve suas próprias plataformas digitais para organizar dados de campo, planejar a nutrição e acompanhar a evolução de cada área assistida, junto com a equipe e com os clientes.</p>
+      <div class="grid g3">
+        <div class="card">
+          <h3>Banco de dados agronômico</h3>
+          <p>Histórico das áreas, análises de solo, evolução da fertilidade e nutrição foliar reunidos em um só lugar.</p>
+        </div>
+        <div class="card">
+          <h3>Planejamento foliar</h3>
+          <p>Ferramenta própria para montar e revisar manejos foliares, com cálculos técnicos e avisos de compatibilidade entre produtos.</p>
+        </div>
+        <div class="card">
+          <h3>Relatórios e zonas de manejo</h3>
+          <p>Relatórios de safra, calculadoras técnicas e geração de zonas de manejo com geoprocessamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <h2>Vamos conversar?</h2>
+          <p>Fale com a Grower e conheça como podemos apoiar o planejamento de fertilidade e nutrição da sua lavoura.</p>
+        </div>
+        <div class="ctas" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="mailto:infra@grower.app.br">infra@grower.app.br</a>
+          <a class="btn ghost" href="https://www.instagram.com/grower.ca/" target="_blank" rel="noopener">Instagram @grower.ca</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-grower.png" alt="Grower" width="137" height="24">
+    <div class="foot-info">
+      <span>© 2026 Grower Consultoria Solos e Nutrição Ltda · CNPJ 57.305.750/0001-99 · Brasília/DF</span>
+      <span><a href="mailto:infra@grower.app.br">infra@grower.app.br</a> · <a href="https://www.instagram.com/grower.ca/" target="_blank" rel="noopener">Instagram @grower.ca</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
