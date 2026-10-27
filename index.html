@@ -88,6 +88,21 @@
   .contact h2{margin-bottom:10px}
   .contact p{color:var(--muted);max-width:520px}
 
+  .list{list-style:none;margin:6px 0 18px}
+  .list li{padding:7px 0 7px 22px;position:relative;border-bottom:1px solid var(--line);font-size:.97rem}
+  .list li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:50%;background:var(--lime)}
+  .mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .mini strong{display:block;color:var(--lime);font-size:1.35rem;font-weight:800;line-height:1.1}
+  .mini span{color:var(--muted);font-size:.85rem}
+  .gsn{margin-top:22px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:20px;padding:40px}
+  .gsn h3{font-size:1.8rem;font-weight:800;margin-bottom:10px}
+  .gsn p{opacity:.9;margin-bottom:10px}
+  .muted-s{color:var(--muted);font-size:.95rem}
+  .gsn-nums{display:grid;gap:14px}
+  .gsn-nums div{background:rgba(0,0,0,.18);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+  .gsn-nums strong{display:block;font-size:1.8rem;font-weight:800;color:var(--lime);line-height:1.1}
+  .gsn-nums span{color:var(--muted);font-size:.9rem}
+  @media (max-width:960px){.gsn{grid-template-columns:1fr;padding:28px}}
   footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.9rem}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
   footer img{height:24px;width:auto;opacity:.9}
@@ -118,6 +133,7 @@
     <a href="#inicio" aria-label="Grower — início"><img src="assets/logo-grower.png" alt="Grower" width="171" height="30" style="height:30px;width:auto"></a>
     <ul>
       <li><a href="#quem-somos">Quem somos</a></li>
+      <li><a href="#areas">Atuação</a></li>
       <li><a href="#servico">Serviço</a></li>
       <li><a href="#culturas">Culturas</a></li>
       <li><a href="#tecnologia">Tecnologia</a></li>
@@ -129,9 +145,9 @@
 <main id="inicio">
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Consultoria agronômica</span>
-      <h1>Consultoria<br><span class="lime">Grower</span></h1>
-      <p class="lead">Fertilidade do solo e nutrição de plantas. Nossa missão é tornar sua lavoura mais produtiva e rentável.</p>
+      <span class="eyebrow">Consultoria · Pesquisa · Academy</span>
+      <h1>Grower<br><span class="lime">Solos &amp; Nutrição</span></h1>
+      <p class="lead">Consultoria, pesquisa e capacitação em fertilidade do solo e nutrição de plantas. Nossa missão é tornar sua lavoura mais produtiva e rentável.</p>
       <div class="ctas">
         <a class="btn" href="#contato">Fale com a Grower</a>
         <a class="btn ghost" href="#servico">Como trabalhamos</a>
@@ -141,10 +157,10 @@
 
   <div class="numbers">
     <div class="wrap">
-      <div class="num"><strong>+390 mil</strong><span>hectares assistidos</span></div>
-      <div class="num"><strong>2</strong><span>países de atuação</span></div>
+      <div class="num"><strong>+1 mi ha</strong><span>assistidos por produtores e consultores</span></div>
+      <div class="num"><strong>453</strong><span>experimentos de pesquisa conduzidos</span></div>
+      <div class="num"><strong>1.157</strong><span>profissionais treinados nas imersões</span></div>
       <div class="num"><strong>8</strong><span>culturas atendidas</span></div>
-      <div class="num"><strong>7</strong><span>etapas para as máximas produtividades</span></div>
     </div>
   </div>
 
@@ -189,9 +205,73 @@
     </div>
   </section>
 
-  <section id="servico" style="background:var(--bg2)">
+
+  <section id="areas" style="background:var(--bg2)">
     <div class="wrap">
-      <span class="eyebrow">Nosso serviço</span>
+      <span class="eyebrow">Áreas de atuação</span>
+      <h2>Três frentes, um mesmo foco:<br>fertilidade e nutrição de plantas</h2>
+      <p class="sub">A Grower atua em consultoria, pesquisa e capacitação, com uma equipe multidisciplinar de doutores, mestres, agrônomos e estudantes de agronomia.</p>
+      <div class="grid g3 areas">
+        <div class="card">
+          <h3>Consultoria</h3>
+          <ul class="list">
+            <li>Consultoria para produtores</li>
+            <li>Consultoria para consultores</li>
+            <li>Projetos de validação</li>
+          </ul>
+          <div class="mini">
+            <div><strong>+400 mil ha</strong><span>com produtores</span></div>
+            <div><strong>+600 mil ha</strong><span>via consultores</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Pesquisa</h3>
+          <ul class="list">
+            <li>Consultoria para estações de pesquisa</li>
+            <li>Condução de protocolos</li>
+            <li>Projetos de validação</li>
+          </ul>
+          <div class="mini">
+            <div><strong>453</strong><span>experimentos</span></div>
+            <div><strong>9.697</strong><span>tratamentos</span></div>
+            <div><strong>40 mil</strong><span>parcelas</span></div>
+            <div><strong>5</strong><span>regiões do Brasil</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Academy</h3>
+          <ul class="list">
+            <li>Grower Experience</li>
+            <li>Imersões</li>
+            <li>Mentoria</li>
+            <li>Palestras</li>
+          </ul>
+          <div class="mini">
+            <div><strong>1.157</strong><span>profissionais treinados</span></div>
+            <div><strong>7</strong><span>estados</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gsn">
+        <div>
+          <span class="eyebrow">Grower Academy</span>
+          <h3>Imersão GSN</h3>
+          <p>Evento presencial de dois dias promovido pela unidade GSN (Solos &amp; Nutrição) da Grower Academy. Reúne agrônomos, consultores, produtores rurais e representantes da indústria para uma imersão técnica em fertilidade do solo e nutrição de plantas.</p>
+          <p class="muted-s">Em 2026, as imersões em Palmas (TO), Cuiabá (MT) e Uberlândia (MG) reuniram 389 participantes.</p>
+        </div>
+        <div class="gsn-nums">
+          <div><strong>1.157</strong><span>profissionais treinados</span></div>
+          <div><strong>11</strong><span>edições em 7 estados</span></div>
+          <div><strong>+15 mi ha</strong><span>de influência direta</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servico">
+    <div class="wrap">
+      <span class="eyebrow">Consultoria · nosso método</span>
       <div class="big7"><b>7</b><span>etapas para as máximas produtividades</span></div>
       <ol class="steps">
         <li>Avaliação da fertilidade</li>
@@ -205,7 +285,7 @@
     </div>
   </section>
 
-  <section id="culturas">
+  <section id="culturas" style="background:var(--bg2)">
     <div class="wrap split">
       <div>
         <span class="eyebrow">Culturas</span>
@@ -219,7 +299,7 @@
     </div>
   </section>
 
-  <section id="tecnologia" style="background:var(--bg2)">
+  <section id="tecnologia">
     <div class="wrap">
       <span class="eyebrow">Tecnologia Grower</span>
       <h2>Plataformas próprias<br>para decisões baseadas em dados</h2>
